@@ -36,7 +36,7 @@ ng test
 ---
 
 #### 🧾 Autor
-Desarrollado por Manuel Felipe Montoya Porras
-Contacto: [mafmontoya@personalsoft.com]
-LinkedIn: [https://www.linkedin.com/in/manuel-felipe-montoya-porras-801773231]
+- Desarrollado por Manuel Felipe Montoya Porras
+- Contacto: [mafmontoya@personalsoft.com]
+- LinkedIn: [https://www.linkedin.com/in/manuel-felipe-montoya-porras-801773231]
 
