@@ -1,0 +1,22 @@
+<mat-card>
+  <h2>Fondos Disponibles</h2>
+  <mat-table [dataSource]="fondos" class="mat-elevation-z2">
+
+    <ng-container matColumnDef="nombre">
+      <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+      <mat-cell *matCellDef="let fondo"> {{ fondo.nombre }} </mat-cell >
+    </ng-container>
+
+    <ng-container matColumnDef="montoMinimo">
+      <mat-header-cell *matHeaderCellDef> Monto Mínimo </mat-header-cell>
+      <mat-cell *matCellDef="let fondo"> {{ fondo.montoMinimo | currency:'COP':'symbol' }} </mat-cell >
+    </ng-container>
+
+    <ng-container matColumnDef="categoria">
+      <mat-header-cell *matHeaderCellDef> Categoría </mat-header-cell>
+      <mat-cell *matCellDef="let fondo"> {{ fondo.categoria }} </mat-cell >
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="['nombre', 'montoMinimo', 'categoria']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['nombre', 'montoMinimo', 'categoria'];"></mat-row>
+  </mat-table>

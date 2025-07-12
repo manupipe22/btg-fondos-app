@@ -1,0 +1,38 @@
+<mat-card>
+  <h2>Historial de Transacciones</h2>
+  <table mat-table [dataSource]="transacciones" class="mat-elevation-z2">
+
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef> Tipo </th>
+      <td mat-cell *matCellDef="let t"> {{ t.tipo | titlecase }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fondoNombre">
+      <th mat-header-cell *matHeaderCellDef> Fondo </th>
+      <td mat-cell *matCellDef="let t"> {{ t.fondoNombre }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="monto">
+      <th mat-header-cell *matHeaderCellDef> Monto </th>
+      <td mat-cell *matCellDef="let t"> {{ t.monto | currency:'COP':'symbol' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell *matHeaderCellDef> Fecha </th>
+      <td mat-cell *matCellDef="let t"> {{ t.fecha | date:'short' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let t">
+        <button mat-button color="warn" *ngIf="t.tipo === 'suscripcion'" (click)="cancelar(t)">
+          Cancelar
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['tipo', 'fondoNombre', 'monto', 'fecha', 'acciones']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['tipo', 'fondoNombre', 'monto', 'fecha', 'acciones'];"></tr>
+
+  </table>
+</mat-card>
