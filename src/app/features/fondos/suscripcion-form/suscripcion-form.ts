@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Fondo } from '../../../core/models/fondo.model';
 import { FondosService } from '../../../core/services/fondos/fondos.service';

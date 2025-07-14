@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FondosService } from '../../../core/services/fondos/fondos.service';
 import { Fondo } from '../../../core/models/fondo.model';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-fondos-lista',
