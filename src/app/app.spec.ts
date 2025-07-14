@@ -8,11 +8,11 @@ import { RouterOutlet } from '@angular/router';
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [App], // ⬅️ Porque no es standalone
+      declarations: [App], 
       imports: [
         MatToolbarModule,
         MatButtonModule,
-        RouterOutlet // ✅ Soluciona el error de 'router-outlet'
+        RouterOutlet
       ],
       providers: [provideRouter([])]
     }).compileComponents();
