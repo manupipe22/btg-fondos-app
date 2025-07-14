@@ -21,6 +21,8 @@ ESTA ES UNA PRUEBA DE EVALUACION, Aplicación web desarrollada en Angular 20 par
 
 ### 1. Clonar repositorio
 
+- Tener en cuenta que debe abrir 2 consolas, una para el servidor mock del servicio y el otro para la aplicación
+
 ```bash
 git clone https://github.com/manupipe22/prueba_BTG.git
 cd btg-fondos-app
