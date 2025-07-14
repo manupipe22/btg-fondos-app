@@ -33,28 +33,5 @@ export class FondosService {
   getFondos(): Observable<Fondo[]> {
     return this.http.get<Fondo[]>(`${this.apiUrl}/fondos`);
   }
-
-  suscribirAFondo(data: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/suscripciones`, data);
-  }
-
-  cancelarSuscripcion(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/suscripciones/${id}`);
-  }
-
-  registrarTransaccion(transaccion: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/transacciones`, transaccion);
-  }
-
-  getHistorial(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/transacciones`);
-  }
-
-  actualizarSaldo(nuevoSaldo: number): Observable<any> {
-    return this.http.patch(`${this.apiUrl}/usuario`, { saldo: nuevoSaldo });
-  }
-
-  getUsuario(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/usuario`);
-  }
+  
 }

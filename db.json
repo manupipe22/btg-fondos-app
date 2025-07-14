@@ -30,12 +30,5 @@
       "montoMinimo": 100000,
       "categoria": "FPV"
     }
-  ],
-  "suscripciones": [],
-  "transacciones": [],
-  "usuario": {
-    "id": 1,
-    "nombre": "Cliente BTG",
-    "saldo": 500000
-  }
+  ]
 }
